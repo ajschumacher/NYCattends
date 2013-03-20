@@ -9,7 +9,7 @@ These are exactly the DOE's XML documents, renamed to include the date. They're 
 
 There's also a twitter account: [@NYCattends](https://twitter.com/NYCattends)
 
-The DOE's site gives the following disclaimer:
+The DOE's [site](https://github.com/ajschumacher/NYCattends/blob/master/bit.ly/NYCattends) gives the following disclaimer:
 
 > Attendance figures for [today's date] are accurate as of 4:00pm, but are not final as schools continue to submit data after we generate this preliminary report.
 

@@ -22,5 +22,5 @@ attd$pct <- as.numeric(attd$ATTN_PCT)
 
 # add date, week, and day-of-week columns
 attd$date <- strptime(attd$ATTN_DATE_YMD, format='%Y%m%d')
-attd$week <- strftime(attd$date, '%W')
-attd$day <- strftime(attd$date, '%A')
+attd$week <- as.numeric(strftime(attd$date, '%W'))
+attd$day <- as.numeric(strftime(attd$date, '%w'))

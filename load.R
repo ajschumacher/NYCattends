@@ -1,5 +1,5 @@
 # Install this package if you don't have it yet.
-install.packages("XML")
+#install.packages("XML")
 
 # Load packages
 library(XML)
@@ -21,5 +21,6 @@ for (filename in filenames) {
 attd$pct <- as.numeric(attd$ATTN_PCT)
 
 # add date, week, and day-of-week columns
-
-
+attd$date <- strptime(attd$ATTN_DATE_YMD, format='%Y%m%d')
+attd$week <- as.numeric(strftime(attd$date, '%W'))
+attd$day <- as.numeric(strftime(attd$date, '%w'))

@@ -1,4 +1,5 @@
 
+boxplot(attd$pct ~ attd$ATTN_DATE_YMD)
 boxplot(attd$pct ~ attd$day)
 
 library(ggplot2)
@@ -15,7 +16,20 @@ ggplot(subset(attd, DBN!='TOTAL' & day %in% 1:5)) + aes(x=day, y=pct, group=DBN)
 str(attd)
 
 # For fun, we can poke around by school name.
-attd[grep('Mott Hall', attd$SCHOOL_NAME, ignore.case=TRUE),]
+unique(attd[grep('mott', attd$SCHOOL_NAME, ignore.case=TRUE),c("DBN","SCHOOL_NAME")])
+
+# top attendance
+head(attd[order(-attd$pct),])
+
+subset(attd, DBN=='02M475', select=-c(4:6))
+subset(attd, DBN=='05M304', select=-c(4:6))
+subset(attd, DBN=='02M343', select=-c(4:6))
+subset(attd, DBN=='09X058', select=-c(4:6))
+
+
+
+
+
 
 # Let's start to explore.
 # We can do this numerically:

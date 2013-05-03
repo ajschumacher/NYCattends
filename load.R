@@ -7,6 +7,8 @@ library(XML)
 filenames <- list.files(pattern="[0-9]{8}\\.xml$")
 attd <- NULL
 for (filename in filenames) {
+  # where are we in this process?
+  print(filename)
   # read file as text
   raw_xml <- readLines(filename)
   # remove non-printing characters

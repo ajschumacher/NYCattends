@@ -14,3 +14,7 @@ The DOE's [site](https://github.com/ajschumacher/NYCattends/blob/master/bit.ly/N
 > NOTE: Schools that have not yet submitted attendance information are listed as "NS" in the below table and XML download. The same field is listed as "-1" in the Excel download.
 
 This twitter account is not affiliated with DOE either: [@NYCattends](https://twitter.com/NYCattends)
+
+---
+
+The XML from NYCDOE contains ASCII decimal 26 characters, the "[synchronous idle](http://en.wikipedia.org/wiki/Synchronous_idle)" character. You probably want to go ahead and take those out before parsing.

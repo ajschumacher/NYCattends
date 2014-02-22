@@ -21,7 +21,7 @@ for filename in sorted(glob.glob('../xml/*.xml')):
         if element.text: contents[element.tag] = element.text
       rows.append([contents.get(field,'').encode('utf-8') for field in fields])
 
-with open('../data/through_20130918.csv', 'w') as file:
+with open('../data/through_20140221.csv', 'w') as file:
   writer = csv.writer(file)
   for line in rows:
     writer.writerow(line)

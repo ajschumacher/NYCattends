@@ -1,13 +1,15 @@
 NYCattends: NYCDOE attendance archive
 -------------------------------------
 
-The NYCDOE [publishes](http://bit.ly/NYCattends) a daily attendance report, but it doesn't seem possible to access historical reports, so I'm downloading them every day and putting them up here.
+The NYCDOE [publishes](http://bit.ly/NYCattendsNow) a daily attendance report, but it doesn't seem possible to access historical reports, so I'm downloading them every day and putting them up here.
 
 These are exactly the DOE's XML documents, renamed to include the date. They're exactly what you'd get if you downloaded from this address after four o'clock on the day of interest:
 
-    http://schools.nyc.gov/aboutus/data/attendancexml/
+    http://schools.nyc.gov/AboutUs/schools/data/attendancexml/
 
-The DOE's [site](https://github.com/ajschumacher/NYCattends/blob/master/bit.ly/NYCattends) gives the following disclaimer:
+(Previously the URL was `http://schools.nyc.gov/aboutus/data/attendancexml/` and as of 2014-10-21 the link from the DOE page was incorrect.)
+
+The DOE's [site](http://bit.ly/NYCattendsNow) gives the following disclaimer:
 
 > Attendance figures for [today's date] are accurate as of 4:00pm, but are not final as schools continue to submit data after we generate this preliminary report.
 

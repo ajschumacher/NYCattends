@@ -11,8 +11,9 @@
 # A Twitter app requires four things for authentication,
 # all strings.
 
-{"consumer_key": "fill in!",
+{
+ "consumer_key": "fill in!",
  "consumer_secret": "fill in!",
  "access_token": "fill in!",
- "access_token_secret": "fill in!"
+ "access_token_secret": "fill in!",
 }

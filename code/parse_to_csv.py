@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import glob
-from lxml import etree
+from xml.etree import ElementTree as etree
 import sys
 import csv
 

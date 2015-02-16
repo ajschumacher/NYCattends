@@ -2,6 +2,7 @@
 
 import glob
 from lxml import etree
+import sys
 import csv
 
 fields = ['ATTN_DATE_YMD', 'DBN', 'ATTN_PCT',
@@ -21,7 +22,6 @@ for filename in sorted(glob.glob('../xml/*.xml')):
         if element.text: contents[element.tag] = element.text
       rows.append([contents.get(field,'').encode('utf-8') for field in fields])
 
-with open('../data/through_20140221.csv', 'w') as file:
-  writer = csv.writer(file)
-  for line in rows:
-    writer.writerow(line)
+writer = csv.writer(sys.stdout)
+for line in rows:
+  writer.writerow(line)

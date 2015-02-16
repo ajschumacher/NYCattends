@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
-import glob
-from xml.etree import ElementTree as ET
 import sys
 import csv
+from xml.etree import ElementTree as ET
 
 fields = ['ATTN_DATE_YMD', 'DBN', 'ATTN_PCT',
           'SCHOOL_NAME', 'Borough', 'DistrictCode', 'LOC_CODE']
@@ -11,7 +10,7 @@ fields = ['ATTN_DATE_YMD', 'DBN', 'ATTN_PCT',
 writer = csv.writer(sys.stdout)
 writer.writerow(fields)
 
-for filename in sorted(glob.glob('../xml/*.xml')):
+for filename in sys.argv[1:]:
     with open(filename) as f:
         # All data is on one long line.
         line = f.readline()
